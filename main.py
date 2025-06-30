@@ -1,7 +1,7 @@
 import os
 from pyrogram import Client, filters
 from pytgcalls import PyTgCalls, idle
-from pytgcalls.types.input_stream import InputStream, AudioPiped
+from pytgcalls.types.input_stream import AudioPiped
 from youtubesearchpython import VideosSearch
 from dotenv import load_dotenv
 import yt_dlp
@@ -66,7 +66,7 @@ async def play(_, message):
         try:
             await pytgcalls.join_group_call(
                 chat_id,
-                InputStream(AudioPiped(file_path)),
+                AudioPiped(file_path),
             )
             await message.reply(f"▶️ Now playing: **{title}**")
         except Exception as e:
@@ -86,7 +86,7 @@ async def skip(_, message):
         next_song = queues[chat_id][0]
         await pytgcalls.change_stream(
             chat_id,
-            InputStream(AudioPiped(next_song)),
+            AudioPiped(next_song),
         )
         await message.reply("⏭ Skipped. Playing next song.")
     else:
