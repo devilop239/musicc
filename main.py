@@ -1,7 +1,7 @@
 import os
 from pyrogram import Client, filters
 from pytgcalls import PyTgCalls, idle
-from pytgcalls.types.input_stream import AudioPiped
+from pytgcalls.types.stream import AudioPiped
 from youtubesearchpython import VideosSearch
 from dotenv import load_dotenv
 import yt_dlp
