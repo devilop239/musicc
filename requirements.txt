@@ -3,4 +3,4 @@ tgcrypto
 yt-dlp
 youtube-search-python
 python-dotenv
-git+https://github.com/pytgcalls/pytgcalls.git
+git+https://github.com/pytgcalls/pytgcalls.git@e6f8ef70e2d9d2453cf9fa4c574242ea21a2e3da
